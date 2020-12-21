@@ -1,4 +1,7 @@
 #include <iostream>
+#include <string.h>
+
+#include "visitante.h"
 
 using namespace std;
 
@@ -36,21 +39,46 @@ int main(){
             case 1:
                 /* code */
                 break;
-
+            
             case 2:
 
                 break;
-
+            
             case 3:
 
                 break;
 
             case 4:
-
+            {
+                int ruta;
+                cout<<"Ruta a la que desea añadir al visitante: ";
+                cin>>ruta;
+                Visitante aux;
+                string nombre, dni, direccion, nacimiento, problemas;
+                int telefono;
+                cout<<"Nombre: ";
+                cin>>nombre;
+                cout<<"DNI: ";
+                cin>>dni;
+                cout<<"Dirección: ";
+                cin>>direccion;
+                cout<<"Fecha de nacimiento: ";
+                cin>>nacimiento;
+                cout<<"Problemas de salud: ";
+                cin>>problemas;
+                cout<<"Teléfono: ";
+                cin>>telefono;
+                aux.setInfo(nombre, dni, direccion, nacimiento, problemas, telefono);
+            }
                 break;
 
             case 5:
-
+            {
+                string dni;
+                cout<<"Introduzca el DNI del visitante que desea eliminar: ";
+                cin>>dni;
+                
+            }
                 break;
 
             case 6:
@@ -71,7 +99,7 @@ int main(){
             }
 
         }while(option!=10);
-
+        
         return 0;
 
     }else if(trabajador==2){
@@ -94,11 +122,11 @@ int main(){
             case 1:
                 /* code */
                 break;
-
+            
             case 2:
 
                 break;
-
+            
             case 3:
 
                 break;
@@ -119,7 +147,7 @@ int main(){
         }while(option!=6);
 
         return 0;
-
+    
     }else{
 
         cout<<"\nError. Elección no permitida.\n";
